@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         tools:text="lutti"/>
     <TextView
+        android:id="@+id/default_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="one"/>

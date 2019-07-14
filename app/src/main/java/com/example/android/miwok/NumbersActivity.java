@@ -20,33 +20,23 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
 
-        ArrayList<String> listaReci = new ArrayList<String>();
-        listaReci.add("one");
-        listaReci.add("two");
-        listaReci.add("three");
-        listaReci.add("four");
-        listaReci.add("five");
-        listaReci.add("six");
-        listaReci.add("seven");
-        listaReci.add("eight");
-        listaReci.add("nine");
-        listaReci.add("ten");
-        listaReci.add("eleven");
-        listaReci.add("twelve");
-        listaReci.add("threeteen");
-        listaReci.add("fourteen");
-        listaReci.add("fiveteen");
-        listaReci.add("sixteen");
-        listaReci.add("seventeen");
-        listaReci.add("eighteen");
-        listaReci.add("nineteen");
-        listaReci.add("twenty");
+        ArrayList<Word> listaReci = new ArrayList<Word>();
+        listaReci.add(new Word("one","lutti"));
+        listaReci.add(new Word("two","otiiko"));
+        listaReci.add(new Word("three","tolokoosu"));
+        listaReci.add(new Word("four","oyysa"));
+        listaReci.add(new Word("five","massokka"));
+        listaReci.add(new Word("six","temmokka"));
+        listaReci.add(new Word("seven","kenekaku"));
+        listaReci.add(new Word("eight","kawinta"));
+        listaReci.add(new Word("nine","wo'e"));
+        listaReci.add(new Word("ten","na'aacha"));
 
 
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaReci);
+        WordAdapter adapter = new WordAdapter(this, listaReci);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
-        listView.setAdapter(itemsAdapter);
+        listView.setAdapter(adapter);
     }
 }
